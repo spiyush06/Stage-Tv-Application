@@ -1,0 +1,16 @@
+<resources>
+
+    <style name="Theme.TvApp" parent="@style/Theme.Leanback" />
+
+
+    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Customize for TV -->
+        <item name="android:windowBackground">@android:color/black</item>
+    </style>
+
+    <style name="RoundedImageStyle">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">12dp</item>
+    </style>
+
+</resources>

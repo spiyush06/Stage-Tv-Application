@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/exo_controller_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent">
+
+    <!-- 🔝 Top-right logo -->
+    <ImageView
+        android:id="@+id/logoView"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_logo_stage"
+        android:layout_gravity="top|end"
+        android:layout_margin="16dp" />
+
+    <!-- ⏯ Center Controls -->
+    <LinearLayout
+        android:id="@+id/centerControls"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_gravity="center">
+
+        <ImageButton
+            android:id="@+id/exo_rew"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_replay_10"
+            android:background="@drawable/round_button_bg"
+            android:contentDescription="Rewind"
+            android:focusable="true"
+            android:clickable="true"
+            android:padding="10dp" />
+
+        <ImageButton
+            android:id="@+id/exo_play_pause"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_play_arrow"
+            android:background="@drawable/round_button_bg"
+            android:contentDescription="Play/Pause"
+            android:focusable="true"
+            android:clickable="true"
+            android:layout_margin="10dp"
+            android:padding="12dp" />
+
+        <ImageButton
+            android:id="@+id/exo_ffwd"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_forward_10"
+            android:background="@drawable/round_button_bg"
+            android:contentDescription="Forward"
+            android:focusable="true"
+            android:clickable="true"
+            android:padding="10dp" />
+
+    </LinearLayout>
+
+    <!-- ⏭ Skip Trailer -->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnSkipTrailer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SKIP TRAILER ▶"
+        android:textAllCaps="true"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/bg_skip_btn"
+        android:layout_gravity="center_vertical|end"
+        android:layout_marginEnd="40dp" />
+
+    <!-- ⬇️ Bottom Title + Progress -->
+    <LinearLayout
+        android:id="@+id/bottomContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="bottom"
+        android:padding="16dp"
+        android:background="#66000000">
+
+        <TextView
+            android:id="@+id/videoTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="घर की बात ट्रेलर"
+            android:textColor="#FFFFFF"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="4dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <com.google.android.material.progressindicator.LinearProgressIndicator
+                android:id="@+id/progressBar"
+                android:layout_width="0dp"
+                android:layout_height="6dp"
+                android:layout_weight="1"
+                android:progress="50"
+                android:progressTint="#FFFFFF"
+                android:trackTint="#55FFFFFF" />
+
+            <TextView
+                android:id="@+id/timeText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="01:44"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                android:layout_marginStart="8dp" />
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

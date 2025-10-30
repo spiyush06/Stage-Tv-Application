@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Stage</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="API_KEY">Removed due to invalid url</string>
+</resources>
